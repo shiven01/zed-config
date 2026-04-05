@@ -1,0 +1,92 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "icon_theme": "Zed (Default)",
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "edit_predictions": {
+    "provider": "zed",
+  },
+  "show_edit_predictions": false,
+  "enable_language_server": true,
+  "context_servers": {
+    "mcp-server-context7": {
+      "enabled": true,
+      "settings": {
+        "context7_api_key": [REDACTED],
+      },
+    },
+  },
+  "agent": {
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "ls"
+            },
+            {
+              "pattern": "grep"
+            }
+          ]
+        },
+        "mcp:mcp-server-context7:resolve-library-id": {
+          "default": "allow",
+        },
+        "mcp:mcp-server-context7:query-docs": {
+          "default": "allow",
+        },
+      },
+    },
+    "default_profile": "write",
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
+    },
+    "model_parameters": [],
+  },
+  "languages": {
+    "TypeScript": { "language_servers": ["vtsls"] },
+    "TSX": { "language_servers": ["vtsls"] },
+    "JavaScript": { "language_servers": ["vtsls"] },
+    "JSX": { "language_servers": ["vtsls"] },
+    "CSS": {
+      "language_servers": ["tailwindcss-language-server", "vscode-css-language-server"]
+    },
+    "SCSS": {
+      "language_servers": ["tailwindcss-language-server", "vscode-css-language-server"]
+    },
+    "JSON": {
+      "language_servers": ["vscode-json-language-server"]
+    },
+  },
+  "file_scan_inclusions": [".git"],
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "project_panel": {
+    "show_diagnostics": "all",
+  },
+  "theme": {
+    "mode": "light",
+    "light": "One Light",
+    "dark": "Cobalt2.1",
+  },
+}

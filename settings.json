@@ -33,12 +33,12 @@
         "terminal": {
           "always_allow": [
             {
-              "pattern": "ls"
+              "pattern": "ls",
             },
             {
-              "pattern": "grep"
-            }
-          ]
+              "pattern": "grep",
+            },
+          ],
         },
         "mcp:mcp-server-context7:resolve-library-id": {
           "default": "allow",
@@ -63,16 +63,22 @@
     "JavaScript": { "language_servers": ["vtsls"] },
     "JSX": { "language_servers": ["vtsls"] },
     "CSS": {
-      "language_servers": ["tailwindcss-language-server", "vscode-css-language-server"]
+      "language_servers": [
+        "tailwindcss-language-server",
+        "vscode-css-language-server",
+      ],
     },
     "SCSS": {
-      "language_servers": ["tailwindcss-language-server", "vscode-css-language-server"]
+      "language_servers": [
+        "tailwindcss-language-server",
+        "vscode-css-language-server",
+      ],
     },
     "JSON": {
-      "language_servers": ["vscode-json-language-server"]
+      "language_servers": ["vscode-json-language-server"],
     },
   },
-  "file_scan_inclusions": [".git"],
+  "file_scan_exclusions": ["**/.git, **/node_modules"],
   "telemetry": {
     "diagnostics": false,
     "metrics": false,

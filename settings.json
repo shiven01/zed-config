@@ -78,7 +78,7 @@
       "language_servers": ["vscode-json-language-server"],
     },
   },
-  "file_scan_exclusions": ["**/.git, **/node_modules"],
+  "file_scan_exclusions": ["**/.git", "**/node_modules"],
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
